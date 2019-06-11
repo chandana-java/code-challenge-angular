@@ -1,0 +1,29 @@
+<p align="center">
+  User Accounts
+</p>
+
+
+<table border="1" align="center">
+  <thead></thead>
+  <tr>
+    <th>Name</th>
+    <th>Account Number</th>
+    <th>Account Type</th>
+    <th>Currency</th>
+    <th>Balance Date</th>
+    <th>Balance</th>
+  </tr>
+
+  <tbody>
+  <tr *ngFor="let account of accounts">
+    <td>{{account.name}}</td>
+    <td>
+      <a [routerLink]="['/accountTransactions',account.accountNumber]">{{account.accountNumber}}</a>
+    </td>
+    <td>{{account.type}}</td>
+    <td>{{account.currency}}</td>
+    <td>{{account.balanceDate}}</td>
+    <td>{{account.balance}}</td>
+  </tr>
+  </tbody>
+</table>
